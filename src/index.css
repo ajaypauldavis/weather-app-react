@@ -21,6 +21,10 @@ body {
   background-image: url(./assets/images/weather-cloudy.jpg);
 }
 
+.Mist{
+  background-image: url(./assets/images/weather-cloudy.jpg);
+}
+
 .Rain{
   background-image: url(./assets/images/weather-rainy.jpg);
 }
