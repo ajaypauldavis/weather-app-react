@@ -5,7 +5,8 @@ const api = {
 }
 function App() {
   const [query, setQuery] = useState('');
-  const [weather, setWeather] =useState({});
+  const [weather, setWeather] =useState({weather:[""]});
+
 
   const search = evt => {
     if (evt.key ==="Enter"){
@@ -14,6 +15,7 @@ function App() {
       .then(result => setWeather(result));
     }
   }
+
   const dateBuilder = (dateValue) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday,", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -26,7 +28,7 @@ function App() {
     return `${day}, ${date}, ${month}, ${year}`
   }
   return (
-    <div className="App">
+    <div className={`${weather.weather[0].main} App `}>
       <main>
         <div className="search-box">
           <input 
